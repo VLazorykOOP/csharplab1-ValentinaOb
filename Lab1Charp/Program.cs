@@ -113,10 +113,10 @@ e:
 static void task5()
 {
 
-    Console.WriteLine("\nTask1");
+    Console.WriteLine("\nTask5");
     Console.Write("X: ");
     string? str = Console.ReadLine();
-    int x = 0,sum=0; 
+    int x = 0; 
     
     if (str != null ) x = int.Parse(str);
 
