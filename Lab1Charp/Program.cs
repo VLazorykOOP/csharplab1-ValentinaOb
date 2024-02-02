@@ -5,7 +5,7 @@ namespace Pr{
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Lab 1 !");
+      Console.WriteLine("\nLab 1");
       
       Console.WriteLine("Choose task: ");
       int s = Convert.ToInt32(Console.ReadLine());
@@ -16,6 +16,7 @@ namespace Pr{
     case 3: { task3();  break;}
     case 4: { task4();  break;}
     case 5: { task5();  break;}
+    case 6: { task6();  break;}
   }
       
     }
@@ -23,7 +24,7 @@ namespace Pr{
 
 static void task1()
 {
-    Console.WriteLine("Task1 !");
+    Console.WriteLine("\nTask1");
     Console.Write("s: ");
     string? str = Console.ReadLine();
     float s = 0; 
@@ -35,7 +36,7 @@ static void task1()
 }
 static void task2()
 {
-    Console.WriteLine("Task2 !");
+    Console.WriteLine("\nTask2");
     e:
     Console.Write("Number (1-99): ");
     string? str = Console.ReadLine();
@@ -111,6 +112,8 @@ e:
 }
 static void task5()
 {
+
+    Console.WriteLine("\nTask1");
     Console.Write("X: ");
     string? str = Console.ReadLine();
     int x = 0,sum=0; 
@@ -152,17 +155,25 @@ else if(n>0){
     return 1/x;
     }
   }
-   
 static void task6()
 {
-    Console.WriteLine("Task1 !");
-    Console.Write("s: ");
-    string? str = Console.ReadLine();
-    float s = 0; 
-    if (str != null) s = float.Parse(str);
+    Console.WriteLine("Task6");
 
-    double p = 6 * s * s;
-    Console.WriteLine("P: " + p);
+    Console.Write("X: ");
+    string? str = Console.ReadLine();
+    
+    e:
+    Console.Write("Y: ");
+    string? str1 = Console.ReadLine();
+    float x = 0, y=0, z=0;
+    
+    if((y*y+1)==0) {Console.WriteLine("Error (y*y+1)!=0 "); goto e;}
+
+    if (str != null ) x = float.Parse(str);
+    if (str1 != null ) y = float.Parse(str1);
+
+    z=(x*y)*(x*y) - ((5*x+y*y)/(y*y+1));
+    Console.WriteLine("Z: " + z);
 
 }
 
